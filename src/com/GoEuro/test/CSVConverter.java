@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * Created by Elmar on 12.03.2015.
+ * Required libs: google-gson-1.7.1, httpcomponents-client-4.4
  */
 public class CSVConverter {
     public static void main(String[] args) {
@@ -41,7 +42,8 @@ public class CSVConverter {
             fw.close();
             System.out.println("Export finished. Result file: result.csv");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File writing problem.");
+            System.out.println("Exception: " + e.getMessage());
         }
     }
 
